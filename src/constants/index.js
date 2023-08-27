@@ -12,4 +12,4 @@ export const videoMovie = (movie_id) => `https://api.themoviedb.org/3/movie/${mo
 
 export const API_POPULAR_MOVIES = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;
 
-export const similarMoviesAccordingToId = (movie_id) => `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=${API_KEY}&language=en-US&page=1`;
+// export const similarMoviesAccordingToId = (movie_id) => `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=${API_KEY}&language=en-US&page=1`;
