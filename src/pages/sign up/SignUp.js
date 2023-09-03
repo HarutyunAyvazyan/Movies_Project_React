@@ -34,7 +34,7 @@ const SignUp = () => {
 
       </form>
       <div className="signUp_footer">
-        <p className="signUp_footer_text">already have a account ? <Link to="#" className="signIn_footer_link"> Sign up</Link> .</p>
+        <p className="signUp_footer_text">already have a account ? <Link to="#" className="signIn_footer_link"> Sign in</Link> .</p>
       </div>
     </div>
   )

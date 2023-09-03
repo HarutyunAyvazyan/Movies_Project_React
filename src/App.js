@@ -10,17 +10,29 @@ import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home";
 import "./App.css"
 import { Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { API_URL } from "./constants";
+import SingleFilmPage from "./pages/singleFilmPage/SingleFilmPage";
 
 function App() {
+  const [films, setFilms] = useState(null);
+
+  useEffect(() => {
+    fetch(API_URL)
+      .then(res => res.json())
+      .then(data => setFilms(data))
+  }, []);
+console.log(films)
   return (
     <div className="container">
         <BrowserRouter >
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
+              <Route index element={<Home  films ={films}/>} />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
-              <Route path="movies" element={<Movies />} />
+              <Route path="movies" element={<Movies films={films}/>} />
+              <Route path="movie/:id" element={<SingleFilmPage />}/>
               <Route path="series" element={<Series />} />
               <Route path="signIn" element={<SignIn />} />
               <Route path="signUp" element={<SignUp />} />

@@ -1,17 +1,17 @@
+import { useEffect, useState } from "react"
 import Cards from "./cards/Cards.js"
 import Data from "./movies/Movies"
 import Main from "./description/Main"
 
 
-const Home = () => {
+const Home = ({films}) => {
+
+
     return (
         <div className="container">
-        <>
          <Main />
-            <Data />
+            <Data films={films}/>
             <Cards />
-        </>
-           
          </div>
     )
 }

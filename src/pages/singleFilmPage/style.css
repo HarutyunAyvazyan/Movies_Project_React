@@ -1,0 +1,43 @@
+
+
+.singleFilm_back{
+    width:100%;
+    height:auto;
+    opacity: 20%;
+
+}
+
+.image_opacity{
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #00000070;
+}
+.singleFilm_title{
+    color:white
+}
+
+.singleFilm_description{
+    color:white
+}
+
+.singleFilm_date{
+    color:white
+
+}
+.singleFilmMain{
+margin: 0 auto;
+display: flex;
+flex-direction: row;
+}
+
+.singleFilmImage_div{
+    width:300px;
+    margin-right:20px
+}
+
+.singleFilm_image{
+    width:100%;
+    height:auto;
+}

@@ -19,13 +19,17 @@ const Main = () => {
                         dolor magna aliquam erat volutpat. Ut wisi
                         enimad minim veniam, quis nostrud exerci
                     </p>
+                    <div className="btn_div">
+                    <button className="main_btn">start now</button>
+
+                    </div>
                 </div>
                 <div className="image_div">
                     <img src={imageMain} className="image_main" />
                 </div>
-            <button className="main_btn">start now</button>
+               
             </div>
-       
+
         </div>
 
     )
