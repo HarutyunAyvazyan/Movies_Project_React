@@ -1,5 +1,6 @@
 import "../description/style.css"
 import imageMain from "../../../assets/images/main.png"
+import { Link } from "react-router-dom"
 
 const Main = () => {
     return (
@@ -20,7 +21,7 @@ const Main = () => {
                         enimad minim veniam, quis nostrud exerci
                     </p>
                     <div className="btn_div">
-                    <button className="main_btn">start now</button>
+                   <Link to={"signUp"}> <button className="main_btn">start now</button></Link> 
 
                     </div>
                 </div>

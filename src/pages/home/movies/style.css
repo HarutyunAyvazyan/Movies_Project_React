@@ -1,49 +1,94 @@
-
-.movies{
-    margin-bottom:100px
+.movies {
+    margin-bottom: 100px
 }
 
-.films{
+.films {
     position: relative;
-    width:96%;
+    width: 96%;
     display: flex;
     flex-direction: row;
-    margin:100px 0 0 0;
-    padding: 40px 0  0 0;
-    border-top:1px solid grey;
+    margin: 100px 0 0 0;
+    padding: 40px 0 0 0;
+    border-top: 1px solid grey;
 }
-.films_title{
+
+.films_title {
     position: absolute;
-    top:-17px;
+    top: -17px;
     line-height: 30px;
-    left:50px;
+    left: 50px;
     background-color: white;
     padding: 0 5px 0 5px;
 }
-.films_item{
+
+.films_item {
     width: 180px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin:30px
-   
+    margin: 30px;
+    position: relative;
 }
 
-.films_background_div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width:100%;
-padding:20px 0 20px 20px;
-background-color: rgb(244, 246, 248);
+.films_item:hover .films_item_hover {
+    opacity: 1;
 }
-.film_image{
-    width:100%;
-    height:300px;
+
+.films_item_hover {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 61, 61, 0.8);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: opacity .2s linear;
     border-radius: 20px;
 }
 
-.film_btn{
+.films_background_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 0 20px 20px;
+    background-color: rgb(244, 246, 248);
+}
+
+.film_image {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.films_item_hover_icon_div {
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.films_item_hover_title {
+    height: 50%;
+
+}
+.films_item_hover_icon_image {
+font-size: 40px;
+color:rgb(244, 11, 11);
+}
+.films_item_hover_icon_image:hover{
+font-size: 60px;
+transition: 0.4s linear;
+}
+
+.film_btn {
     height: 28px;
     margin-top: 20px;
     border: 0;
@@ -62,8 +107,8 @@ background-color: rgb(244, 246, 248);
 
 
 @media(max-width:768px) {
-    .films_item{
-width:180px;
-margin:20px 0
+    .films_item {
+        width: 180px;
+        margin: 20px 0
     }
 }

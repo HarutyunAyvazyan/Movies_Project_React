@@ -6,28 +6,29 @@ import "./style.css"
 import { API_IMAGE } from "../../../../constants"
 
 
-const responsive = {
-    superLargeDesktop: {
-        // the naming can be any, depends on you.
-        breakpoint: { max: 4000, min: 3000 },
-        items: 7
-    },
-    desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 5
-    },
-    tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 4
-    },
-    mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1
-    }
-};
 
 
 const Series = ({ films }) => {
+    
+const responsive = {
+    superLargeDesktop: {
+        // the naming can be any, depends on you.
+        breakpoint: { max: 3000, min: 1800 },
+        items: 6
+    },
+    desktop: {
+        breakpoint: { max: 1800, min: 768 },
+        items: 5
+    },
+    tablet: {
+        breakpoint: { max: 768, min: 480 },
+        items: 3
+    },
+    mobile: {
+        breakpoint: { max: 480, min: 0 },
+        items: 1
+    }
+};
     return films && (
         <>
             <div className="container">
@@ -36,11 +37,11 @@ const Series = ({ films }) => {
 
                    
 
-                        { films.results.map((film) =>
+                        {films.results && films.results.map( film =>
 
                             <div key={film.id} className="films_item">
                                 <Link to={`/movie/${film.id}`}> <img src={`${API_IMAGE}${film.poster_path}`} className="film_image" /></Link>
-                                <Link to={`/movie/${film.id}`} className="film_btn" >{film.title}</Link>
+                                <Link to={`/movie/${film.id}`}><button  className="film_btn" >{film.title}</button></Link>
                             </div>
 
                         )

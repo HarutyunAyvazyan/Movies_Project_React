@@ -11,7 +11,7 @@ const Home = ({films}) => {
         <div className="container">
          <Main />
             <Data films={films}/>
-            <Cards />
+            <Cards films={films}/>
          </div>
     )
 }

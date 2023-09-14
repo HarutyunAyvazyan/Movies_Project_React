@@ -9,7 +9,6 @@ import { API_URL } from "../../../constants"
 const Data =( {films}) => {
 
 
-console.log(films,"kkkkkkkkkkkk")
     return (
         <div className="=container">
    <div className="movies">
