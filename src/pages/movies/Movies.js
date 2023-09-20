@@ -6,18 +6,21 @@ import { RxVideo } from "react-icons/rx"
 
 import "./style.css"
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 
 
 
 
 
-const Movies = ({ films }) => {
+const Movies = () => {
     const [inputValue, setInputValue] = useState("")
+    const films = useSelector(state => state.state.data);
 
 
 
-const filteredFilms = films.results.filter(film => {
+
+const filteredFilms = films.filter(film => {
     return film.title.toLowerCase().includes(inputValue.toLowerCase());
 });
 
@@ -26,8 +29,7 @@ console.log(filteredFilms, "filterrrrrr");
     return (
         <div className="container">
             <div className="movies_search_div">
-                {/* <Search className="link" /> */}
-                <input onChange={(e) => setInputValue(e.target.value)} />
+                <input onChange={(e) => setInputValue(e.target.value)} className="search_input"  placeholder="Search"/>
             </div>
             <div className="films">
                 <div className="films_background_div">

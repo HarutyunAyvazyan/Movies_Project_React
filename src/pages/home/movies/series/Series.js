@@ -4,25 +4,28 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import "./style.css"
 import { API_IMAGE } from "../../../../constants"
+import { useSelector } from "react-redux";
 
 
 
 
-const Series = ({ films }) => {
+const Series = () => {
+    const films = useSelector(state => state.state.data);
+
     
 const responsive = {
     superLargeDesktop: {
         // the naming can be any, depends on you.
-        breakpoint: { max: 3000, min: 1800 },
-        items: 6
+        breakpoint: { max: 3000, min: 1024 },
+        items: 5
     },
     desktop: {
-        breakpoint: { max: 1800, min: 768 },
-        items: 5
+        breakpoint: { max: 1024, min: 768 },
+        items: 3
     },
     tablet: {
         breakpoint: { max: 768, min: 480 },
-        items: 3
+        items: 2
     },
     mobile: {
         breakpoint: { max: 480, min: 0 },
@@ -37,11 +40,11 @@ const responsive = {
 
                    
 
-                        {films.results && films.results.map( film =>
+                        {films && films.map( film =>
 
                             <div key={film.id} className="films_item">
                                 <Link to={`/movie/${film.id}`}> <img src={`${API_IMAGE}${film.poster_path}`} className="film_image" /></Link>
-                                <Link to={`/movie/${film.id}`}><button  className="film_btn" >{film.title}</button></Link>
+                                <Link to={`/movie/${film.id}`} className="film_btn" >{film.title}</Link>
                             </div>
 
                         )

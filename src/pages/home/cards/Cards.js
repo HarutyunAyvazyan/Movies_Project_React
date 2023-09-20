@@ -1,27 +1,16 @@
 import { useState } from "react"
 import Card from "./card/Card"
 import "./style.css"
+import { useSelector } from "react-redux";
 
-const Cards = ({ films }) => {
+const Cards = () => {
     
-    const [cards, setCards] = useState([{
-        id: films.results[0].id,
-        title: films.results[0].title,
-        image: films.results[0].backdrop_path,
-        description: films.results[0].overview
-    }, {
-        id: films.results[1].id,
-        title: films.results[1].title,
-        image: films.results[1].backdrop_path,
-        description: films.results[1].overview
-    },
-    {
-        id: films.results[2].id,
-        title: films.results[2].title,
-        image: films.results[2].backdrop_path,
-        description: films.results[2].overview
+    const films = useSelector(state => state.state.data);
 
-    },])
+    const cards = films.slice(4,7)
+    // console.log(cards)
+
+
     return (
         <div className="container">
             <div className="cards_title_div">

@@ -1,6 +1,5 @@
 .reviews{
     width:100%;
-    background-color: black;
     padding:80px 0;
     display:flex;
     flex-direction: column;
@@ -22,17 +21,13 @@ margin: 0 auto
     padding-bottom:3px
 }
 .reviews_input{
-    width:100%;
-    padding:10px 0 30px 0px;
+    width: 98%;
+    padding: 10px 0 33px 2%;
     border:0;
     margin-bottom:10px;
     border-radius:5px
 }
 
-.reviews_input::placeholder{
-    font-size: 14px;
-    padding-left: 20px;
-}
 
 .reviews_btn_image{
     font-size: 15px;

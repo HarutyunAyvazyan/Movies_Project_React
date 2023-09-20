@@ -10,6 +10,9 @@ export const aboutTheMovie = (movie_id) => `https://api.themoviedb.org/3/movie/$
 
 export const videoMovie = (movie_id) => `https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=${API_KEY}&language=en-US`;
 
+export const videoUrl = "https://www.youtube.com/watch?v="
+
 export const API_POPULAR_MOVIES = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;
 
 export const similarMoviesAccordingToId = (movie_id) => `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=${API_KEY}&language=en-US&page=1`;
+

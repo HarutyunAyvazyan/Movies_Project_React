@@ -1,18 +1,30 @@
-
-
-.recomendetion{
-    background-color: black;
-    width:100%;
+.recomendetion {
+    width: 100%;
 }
 
-.recomendetion_title{
-    color:white
+
+.recomendetion_div {
+    width: 90%;
+    margin: 0 auto;
+
 }
-.recomendetion_div{
+
+.recomendetion_title_div {
+    width: 90%;
+    margin: 0 auto
+}
+
+.recomendetion_title {
+    padding-bottom: 2px;
+    border-bottom: 2px solid red;
+    color: white
+}
+
+.react-multi-carousel-item{
+    display: flex;
+    justify-content: center;
+}
+.react-multi-carousel-list{
     width:90%;
-    margin:0 auto
-}
-.recomendetion_title{
-    padding-bottom:2px;
-    border-bottom:2px solid red
+ 
 }

@@ -5,19 +5,20 @@ import Top from "./top/Top"
 import Movis from "./movis/Movis"
 import Series from "./series/Series"
 import { API_URL } from "../../../constants"
+import { useSelector } from 'react-redux';
 
-const Data =( {films}) => {
+const Data = () => {
 
 
     return (
         <div className="=container">
-   <div className="movies">
-            {/* <Top /> */}
-            {/* <Movis /> */}
-            <Series films={films}/>
+            <div className="movies">
+                {/* <Top />
+                <Movis /> */}
+                <Series />
+            </div>
         </div>
-        </div>
-     
+
 
     )
 }

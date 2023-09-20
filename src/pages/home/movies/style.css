@@ -4,7 +4,7 @@
 
 .films {
     position: relative;
-    width: 96%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     margin: 100px 0 0 0;
@@ -28,6 +28,8 @@
     overflow: hidden;
     margin: 30px;
     position: relative;
+   
+  
 }
 
 .films_item:hover .films_item_hover {
@@ -67,6 +69,7 @@
     border-radius: 20px;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .films_item_hover_icon_div {
@@ -104,6 +107,13 @@ transition: 0.4s linear;
     justify-content: center;
 }
 
+.search_input{
+width:200px;
+height: 30px;
+border-radius:3px;
+font-size:18px;
+border:1px solid grey
+}
 
 
 @media(max-width:768px) {
