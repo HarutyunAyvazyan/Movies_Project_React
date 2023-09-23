@@ -19,12 +19,12 @@ const SignUp = () => {
         <div className="signUp_item_input">
           <Input text={"Number "} />
         </div>
-        
-         <div className="signUp_item_input">
+
+        <div className="signUp_item_input">
           <Input text={"Password "} />
         </div>
-        
-         <div className="signUp_item_input">
+
+        <div className="signUp_item_input">
           <Input text={"Confirm password "} />
         </div>
 

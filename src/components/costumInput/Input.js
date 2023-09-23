@@ -1,7 +1,7 @@
 import "./style.css"
 
 
-const Input = ({text}) => {
+const Input = ({ text }) => {
     return (
         <div className="input_div">
             <p className="input_title">{text}</p>

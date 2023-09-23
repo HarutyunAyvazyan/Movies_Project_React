@@ -5,6 +5,7 @@ import 'react-multi-carousel/lib/styles.css';
 import "./style.css"
 import { API_IMAGE } from "../../../../constants"
 import { useSelector } from "react-redux";
+import { scrollUp } from "../../../../utils/utils";
 
 
 
@@ -43,8 +44,8 @@ const responsive = {
                         {films && films.map( film =>
 
                             <div key={film.id} className="films_item">
-                                <Link to={`/movie/${film.id}`}> <img src={`${API_IMAGE}${film.poster_path}`} className="film_image" /></Link>
-                                <Link to={`/movie/${film.id}`} className="film_btn" >{film.title}</Link>
+                                <Link to={`/movie/${film.id}`} onClick={scrollUp}> <img src={`${API_IMAGE}${film.poster_path}`} className="film_image" /></Link>
+                                <Link to={`/movie/${film.id}`} className="film_btn"  onClick={scrollUp} >{film.title}</Link>
                             </div>
 
                         )

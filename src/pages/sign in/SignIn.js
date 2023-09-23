@@ -16,13 +16,13 @@ const SignIn = () => {
                     <Input text={"Email "} />
                 </div>
                 <div className="signIn_item_input">
-                <span className="password_link">Forgot password?</span>
+                    <span className="password_link">Forgot password?</span>
 
                     <Input text={"Password "} />
-                    
+
                 </div>
                 <div >
-                    <button  className="signIn_item_btn">sign in</button>
+                    <button className="signIn_item_btn">sign in</button>
                 </div>
 
             </form>

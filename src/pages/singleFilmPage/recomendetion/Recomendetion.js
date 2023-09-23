@@ -7,7 +7,7 @@ const Recomendetion = () => {
         <div className="container">
             <div className="recomendetion">
                 <div className="recomendetion_title_div">
-                <span className="recomendetion_title">RECOMENDETION</span>
+                    <span className="recomendetion_title">RECOMENDETION</span>
                 </div>
                 <div className="recomendetion_div">
                     <Series />

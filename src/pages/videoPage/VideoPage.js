@@ -4,13 +4,14 @@ import { useParams } from "react-router-dom"
 
 import React from 'react'
 import ReactPlayer from 'react-player'
-import DailyMotionPlayer from "react-player/dailymotion"
+import axios from "axios"
+import "./style.css"
 
 
 
 const VideoPage = () => {
 
-    const [movieUrl, setMovieUrl] = useState([])
+    const [movieKey, setMovieKey] = useState('')
     const { id, title } = useParams()
     const [film, setFilm] = useState([])
 
@@ -21,53 +22,41 @@ const VideoPage = () => {
     }, [id])
 
     useEffect(() => {
-        fetch(videoMovie(id))
-            .then(result => result.json())
-            .then(data => setMovieUrl(data))
+        const func = async () => {
+            const apiVideo = videoMovie(id);
+            const data = await axios.get(apiVideo);
+            setMovieKey(data.data.results[2].key);
+        }
+        func()
     }, [id])
 
     const image = `${API_IMAGE}${film.backdrop_path}`
-    const url = movieUrl.results ? ` ${videoUrl}${movieUrl.results[0].key}` : null
+    const url = `${videoUrl}${movieKey}`
+
     return (
 
-        <div style={{
-            margin: "0 auto",
-            backgroundColor: "rgb(44, 44, 44)",
-            height: "100%",
-            paddingTop: "100px",
-            paddingBottom: "200px"
-        }}>
-            <h3 style={{
-                display: "flex",
-                justifyContent: "center",
-                marginBottom:"50px",
-                color:"white"
-            }}>{film.title}</h3>
-            <ReactPlayer style={{
-                margin: "0 auto",
-                border: "2px solid grey"
-            }}
-                url={`https://www.dailymotion.com/${url}`}
-                width="80%"
-                margin="0 auto"
-                height="400px"
-                playing={true}
-                light={<img src={image} alt='Thumbnail' style={{
-                    width: "100%",
-                    height: "400px"
-                }} />}
-                volume="0.800"
-                speed="1"
-                played="0.070"
-                loaded="	0.000"
-                duration="2:09"
-                elapsed="0:09"
+        <div className="moviePageVideo">
+            <h3 className="movie_title" >{film.title}</h3>
+
+            <ReactPlayer className="videoPlayer"
+                // width = {window.innerWidth < 768?"480px":window.innerWidth < 480:"300px"}
+                url={`${url}`}
+                playing={false}
+                light={<img src={image} alt={film.title} className="videoPlayer_image" />}
+                volume={0.800}
+                speed={1}
+                played={0.070}
+                loaded={0.000}
+                duration={"2:09"}
+                elapsed={"0:09"}
                 controls={true}
-                remaining
+                remaining={'true'}
+
             />
 
         </div>
     )
+
 }
 
 export default VideoPage

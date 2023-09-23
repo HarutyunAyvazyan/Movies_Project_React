@@ -2,11 +2,12 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: #0d0132;
 }
 
 .container {
   margin: 0 auto;
-  width:1380px;
+  width:100%;
 
 }
 

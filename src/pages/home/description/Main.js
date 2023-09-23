@@ -6,6 +6,7 @@ const Main = () => {
     return (
         <div className="container">
             <div className="main_div">
+                <div className="main_description">
                 <div className="main_text">
                     <h1 className="main_title">ShowHub</h1>
                     <h3 className="main_label">enjoy watching</h3>
@@ -20,16 +21,17 @@ const Main = () => {
                         dolor magna aliquam erat volutpat. Ut wisi
                         enimad minim veniam, quis nostrud exerci
                     </p>
-                    <div className="btn_div">
-                   <Link to={"signUp"}> <button className="main_btn">start now</button></Link> 
-
-                    </div>
                 </div>
                 <div className="image_div">
                     <img src={imageMain} className="image_main" />
                 </div>
+                </div>
                
+                <div className="btn_div">
+                        <Link to={"signUp"}> <button className="main_btn">start now</button></Link>
+                    </div>
             </div>
+            
 
         </div>
 

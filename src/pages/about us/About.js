@@ -4,12 +4,12 @@ import ModalVideo from 'react-modal-video';
 
 
 const About = () => {
-    return (
-        <div>
+  return (
+    <div>
       <h1>about</h1>
-        </div>
-        )
-   
+    </div>
+  )
+
 }
 
 export default About;

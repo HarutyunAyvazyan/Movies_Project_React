@@ -1,181 +1,221 @@
-
-
-.image_opacity{
-    width:100%;
+.image_opacity {
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
+    background-color: #53457c;
+    height: auto;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+
+
+/* .singlePage_div {
     background-color: rgb(44, 44, 44);
-    height:auto
+
+} */
+
+.singleFilm_title {
+    color: white;
+    /* background-color: rgb(52, 9, 92,.7); */
 }
 
-.singlePage_div{
-    background-color: rgb(44, 44, 44);
-
-}
-.singleFilm_title{
-    color:white
+.singleFilm_description {
+    color: white;
+    /* background-color: rgb(52, 9, 92,.7); */
 }
 
-.singleFilm_description{
-    color:white
-}
-
-.film_genre{
-    color:white;
-    margin:0 5px
-}
-.singleFilm_date{
-    color:white
+.film_genre {
+    color: white;
+    margin: 0 5px;
+    /* background-color: rgb(52, 9, 92,.7); */
 
 }
-.singleFilm_Main{
-margin: 0 auto;
-display: flex;
-flex-direction: row;
-width:80%;
-padding-top:150px;
-padding-bottom: 20px;
 
-}
-.film_runtime{
-    color:white
-}
-.fim_average{
-    color:white
+.singleFilm_date {
+    color: white;
+    /* background-color: rgb(52, 9, 92,.7); */
 }
 
-.heart_like{
-color:rgb(245, 235, 235);
-font-size: 20px;
-margin-right:20px
+.singleFilm_Main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    padding-top: 150px;
+    padding-bottom: 20px;
 }
-.heart_like_background{
-  color: red;
+
+.film_runtime {
+    color: white;
+    /* background-color: rgb(52, 9, 92,.7); */
+
+}
+
+.fim_average {
+    color: white;
+    /* background-color: rgb(52, 9, 92,.7); */
+
+}
+
+.heart_like {
+    color: rgb(245, 235, 235);
     font-size: 20px;
-margin-right:20px
+    margin-right: 20px
 }
-.film_like_div{
+
+.heart_like_background {
+    color: red;
+    font-size: 20px;
+    margin-right: 20px
+}
+
+.film_like_div {
     display: flex;
     flex-direction: row;
 }
-.singleFilmImage_div{
-    width:20%;
+
+.singleFilmImage_div {
+    width: 20%;
     height: auto;
-    margin-right:20px;
+    margin-right: 20px;
 }
 
-.singleFilm_image{
-    width:100%;
-    height:100%;
+.singleFilm_image {
+    width: 100%;
+    height: 100%;
 }
 
-.description_film{
-    width:70%;
+.description_film {
+    width: 40%;
+    background-color: rgba(157, 38, 178, 0.2);
+
 }
-.singleFilmPage_btn{
+
+.singleFilmPage_btn {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding:5px 5px;
+    padding: 5px 5px;
     background-color: red;
-    border:0;
-     border-radius:5px ;
-     cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
 }
-.btn_play_image{
+
+.btn_play_image {
     font-size: 15px;
     color: white;
-  
+
 }
 
-.btn_play_image{
-    margin:0 5px;
+.btn_play_image {
+    margin: 0 5px;
 }
-.singleFilmPage_btn_text{
+
+.singleFilmPage_btn_text {
     color: white;
 }
 
-@media (max-width:768px){
-    .singleFilm_Main{
-        width:90%;
-        padding-top:100px;
+.videoPlayer {
+    margin-top: 200px;
+}
+
+@media (max-width:768px) {
+    .singleFilm_Main {
+        width: 90%;
+        padding-top: 100px;
         padding-bottom: 40px;
-        
-        }
-    .singleFilmImage_div{
-        width:40%;
+
+    }
+
+    .videoPlayer {
+        width: 100%
+    }
+
+    .singleFilmImage_div {
+        width: 40%;
         height: auto;
-        margin-right:30px;
+        margin-right: 30px;
     }
-    
-    
-    .description_film{
-        width:70%;
+
+
+    .description_film {
+        width: 70%;
     }
-   
-    .film_runtime{
-font-size: 14px; 
-   }
-    .fim_average{
-        font-size: 14px;   
-     }
-.singleFilm_description{
-    font-size: 14px;
+
+    .film_runtime {
+        font-size: 14px;
+    }
+
+    .fim_average {
+        font-size: 14px;
+    }
+
+    .singleFilm_description {
+        font-size: 14px;
+    }
+
+    .singleFilm_date {
+        font-size: 14px;
+
+    }
+
+    .singleFilm_title {
+        font-size: 24px;
+    }
 }
 
-.singleFilm_date{
-    font-size: 14px;   
+@media (max-width:480px) {
+    .singleFilm_Main {
+        width: 90%;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
 
-}
-
-.singleFilm_title{
-    font-size: 24px;
-}
     }
-    
-    @media (max-width:480px){
-        .singleFilm_Main{
-            width:90%;
-            padding-top:60px;
-            padding-bottom: 40px;
-            display: flex;
-            flex-direction: column;
-            
-            }
-            .singleFilmImage_div{
-                width:90%;
-                height: auto;
-            margin: 0 auto
-            }
 
-            .description_film{
-                width:90%;
-                margin:0 auto;
-                display: flex;
-                flex-direction: column;
-              
-            }
-            .film_runtime{
-                margin:0;
-                margin-bottom:10px 
-
-            }
-                    .fim_average{
-                        font-size: 14px;   
-                     }
-                .singleFilm_description{
-                    font-size: 14px;
-                }
-                
-                .singleFilm_date{
-                    margin:0;
-                    margin-bottom:10px 
-
-                }
-                
-                .singleFilm_title{
-                    font-size: 20px;
-                    margin-bottom:20px 
-                }
+    .singleFilmImage_div {
+        width: 90%;
+        height: auto;
+        margin: 0 auto
     }
+
+    .description_film {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .film_runtime {
+        margin: 0;
+        margin-bottom: 10px
+    }
+
+    .fim_average {
+        font-size: 14px;
+    }
+
+    .singleFilm_description {
+        font-size: 14px;
+    }
+
+    .singleFilm_date {
+        margin: 0;
+        margin-bottom: 10px
+    }
+
+    .singleFilm_title {
+        font-size: 20px;
+        margin-bottom: 20px
+    }
+
+    .videoPlayer {
+        width: 100%
+    }
+}

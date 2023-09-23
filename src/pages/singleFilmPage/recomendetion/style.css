@@ -4,13 +4,13 @@
 
 
 .recomendetion_div {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 
 }
 
 .recomendetion_title_div {
-    width: 90%;
+    width: 80%;
     margin: 0 auto
 }
 
@@ -20,11 +20,12 @@
     color: white
 }
 
-.react-multi-carousel-item{
+.react-multi-carousel-item {
     display: flex;
     justify-content: center;
 }
-.react-multi-carousel-list{
-    width:90%;
- 
+
+.react-multi-carousel-list {
+    width: 90%;
+
 }
