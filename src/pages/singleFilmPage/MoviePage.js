@@ -44,32 +44,33 @@ const MoviePage = () => {
         func()
     }, [id])
 
+   
+
     const image = `${API_IMAGE}${film.backdrop_path}`
     const url = `${videoUrl}${movieKey}`
 
 
     return (
         <>
-            <div className="container">
-                <div className="singlePage_div">
+            <div >
+                <div className="moviePage_div">
                     <div className="image_opacity" style={{ backgroundImage: `url(${API_IMAGE}${film.backdrop_path})` }}>
-                        <div className="singleFilm_Main" >
+                        <div className="movieFilm_Main" >
 
-                            <div className="singleFilmImage_div">
-                                <img src={`${API_IMAGE}${film.poster_path}`} className="singleFilm_image" />
+                            <div className="movieFilmImage_div">
+                                <img src={`${API_IMAGE}${film.poster_path}`} className="movieFilm_image" />
                             </div>
-
                             <div className="description_film">
-                                <h1 className="singleFilm_title">{film.title}</h1>
-                                <p className="singleFilm_date">Release Date:{film.release_date}</p>
+                                <h1 className="movieFilm_title">{film.title}</h1>
+                                <p className="movieFilm_date">Release Date:{film.release_date}</p>
                                 <p className="film_runtime">{film.runtime} min</p>
                                 <p className="fim_average">{parseInt(film.vote_average)}   </p>
-                                {film.genres !== undefined && film.genres.map(item => <span key={item.id} className="film_genre">{item.name}</span>)}
-                                <p className="singleFilm_description">{film.overview}</p>
+                                {film.genres !== undefined && film.genres.map(item => <span key={item.id} className="movieFilm_genre">{item.name}</span>)}
+                                <p className="movieFilm_description">{film.overview}</p>
                                 <div className="film_like_div">
                                     <AiFillHeart className={like ? "heart_like" : "heart_like_background"} onClick={() => setLike(!like)} />
-                                    <button className="singleFilmPage_btn" target="aaa" onClick={scrollDownVideo}>
-                                        <span className="singleFilmPage_btn_text"  >WATCH NOW</span>
+                                    <button className="movieFilmPage_btn" target="aaa" onClick={scrollDownVideo}>
+                                        <span className="movieFilmPage_btn_text"  >WATCH NOW</span>
                                         <BsFillPlayFill className="btn_play_image" />
                                     </button>
                                 </div>
@@ -77,19 +78,22 @@ const MoviePage = () => {
 
                         </div>
                     </div>
-                    <ReactPlayer className="videoPlayer"
-                        width={window.screen.availWidth <= 768 ? 400 : window.screen.availWidth < 480 ? 400 : 600}
-                        url={url}
-                        playing={false}
-                        light={<img src={image} alt={film.title} className="videoPlayer_image" />}
-                        volume={0.800}
-                        speed={1}
-                        played={0.070}
-                        loaded={0.000}
-                        duration={"2:09"}
-                        elapsed={"0:09"}
-                        controls={true}
-                        remaining={'true'} />
+                    <div className="videoPlayer_div">
+                        <h2 className="videoPlayer_text">ENJOY WATCHING</h2>
+                        <ReactPlayer className="videoPlayer"
+                            width={window.screen.availWidth <= 768 ? 400 : window.screen.availWidth < 480 ? 400 : 600}
+                            url={url}
+                            playing={false}
+                            light={<img src={image} alt={film.title} className="videoPlayer_image" />}
+                            volume={0.800}
+                            speed={1}
+                            played={0.070}
+                            loaded={0.000}
+                            duration={"2:09"}
+                            elapsed={"0:09"}
+                            controls={true}
+                            remaining={'true'} />
+                    </div>
                     <Reviews />
                     <Recomendetion />
                 </div>

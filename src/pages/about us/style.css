@@ -1,0 +1,46 @@
+
+.about{
+    width:90%;
+    height: 500px;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #312750;
+    position: relative;
+    margin-bottom:30px;
+    margin:0 auto
+
+}
+
+.container_about{
+    padding-top:20px;
+}
+
+.about_title{
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    right:50%;
+    bottom:50%
+}
+
+.about_description{
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    margin:0 auto;
+    justify-content: space-between;
+    margin-bottom:100px;
+    margin-top:100px
+}
+.about_description_text{
+    width:40%;
+    color:white
+}
+
+.about_description_image{
+    width:40%;
+}

@@ -29,9 +29,10 @@
     overflow: hidden;
     margin: 30px;
     position: relative;
-    box-shadow: 5px 5px 10px #f31cc1;
     border-radius: 20px;
     cursor: pointer;
+    border:1px solid grey
+
 }
 
 .films_item:hover .films_item_hover {
@@ -52,7 +53,7 @@
     top: 0;
     left: 0;
     z-index: 2;
-    transition: opacity .2s linear;
+    transition: opacity .4s linear;
     border-radius: 20px;
 }
 
@@ -62,7 +63,7 @@
     justify-content: space-around;
     width: 80%;
     /* padding: 20px 0 20px 20px; */
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .film_image {
@@ -82,6 +83,7 @@
 
 .films_item_hover_title {
     height: 50%;
+    text-align: center;
 
 }
 
@@ -97,18 +99,23 @@
 
 .film_btn {
     height: 28px;
-    margin-top: 20px;
-    border: 0;
-    border-radius: 20px;
+    /* margin-top: 20px; */
+    /* border-radius: 20px; */
     padding: 10px 5px 10px 5px;
-    background-color: #811B80;
-    font-size: 14px;
-    color: rgba(217, 217, 217, 1);
+    background-color:  rgba(217, 217, 217, 1);
+       font-size: 14px;
+    color: #05010f;
     text-decoration: none;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.film_btn:hover{
+    background-color:rgb(44, 3, 42) ;
+    transition: linear 0.2s;
+    color:white
 }
 
 .search_input {

@@ -24,5 +24,15 @@ export const pageName = {
     moviePageVideo: "movie/:id/:title",
     series: "series",
     signIn: "signIn",
-    signUp: "signUp"
+    signUp: "signUp",
+    newItems: "newItems"
 }
+export const styleErorText = {
+    textAlign: "end",
+    fontSize: "12px",
+    margin: "0",
+    color: "red"
+  }
+  export const styleErorInput = {
+    border:"1px solid red"
+  }

@@ -16,6 +16,7 @@ import { getMovies } from "./utils/APIUtils";
 import { addValue } from "./store/stateSlice";
 import VideoPage from "./pages/videoPage/VideoPage";
 import MoviePage from "./pages/singleFilmPage/MoviePage";
+import NewItems from "./pages/newItems/NewItems";
 
 function App() {
   const dispatch = useDispatch();
@@ -43,6 +44,8 @@ function App() {
               <Route path={pageName.series} element={<Series />} />
               <Route path={pageName.signIn} element={<SignIn />} />
               <Route path={pageName.signUp} element={<SignUp />} />
+              <Route path={pageName.newItems} element={<NewItems />} />
+
             </Route>
           </Routes>
         </BrowserRouter>

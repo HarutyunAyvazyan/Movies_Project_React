@@ -5,7 +5,7 @@ const count = 0
 
 const Reviews = () => {
     return (
-        <div className="container">
+        <div >
             <div className="reviews">
                 <div className="reviews_div">
                     <div className="reviews_text_div">

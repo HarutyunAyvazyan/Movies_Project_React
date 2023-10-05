@@ -16,29 +16,29 @@
 
 } */
 
-.singleFilm_title {
+.movieFilm_title {
     color: white;
     /* background-color: rgb(52, 9, 92,.7); */
 }
 
-.singleFilm_description {
+.movieFilm_description {
     color: white;
     /* background-color: rgb(52, 9, 92,.7); */
 }
 
-.film_genre {
+.movieFilm_genre {
     color: white;
     margin: 0 5px;
     /* background-color: rgb(52, 9, 92,.7); */
 
 }
 
-.singleFilm_date {
+.movieFilm_date {
     color: white;
     /* background-color: rgb(52, 9, 92,.7); */
 }
 
-.singleFilm_Main {
+.movieFilm_Main {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -76,24 +76,26 @@
     flex-direction: row;
 }
 
-.singleFilmImage_div {
+.movieFilmImage_div {
     width: 20%;
     height: auto;
     margin-right: 20px;
+    box-shadow: 5px 5px 10px rgb(192, 189, 192, 1);
 }
 
-.singleFilm_image {
+.movieFilm_image {
     width: 100%;
     height: 100%;
 }
 
 .description_film {
     width: 40%;
-    background-color: rgba(157, 38, 178, 0.2);
+    background-color: rgba(192, 189, 192, .1);
+    padding-left:20px
 
 }
 
-.singleFilmPage_btn {
+.movieFilmPage_btn {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -115,16 +117,26 @@
     margin: 0 5px;
 }
 
-.singleFilmPage_btn_text {
+.movieFilmPage_btn_text {
     color: white;
 }
 
 .videoPlayer {
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
+.videoPlayer_div{
+    text-align: center;
+    margin-top:100px
+}
+
+.videoPlayer_text{
+    color:rgb(226, 43, 208);
+    font-weight: 400;
+    letter-spacing: 10px;
+}
 @media (max-width:768px) {
-    .singleFilm_Main {
+    .movieFilm_Main {
         width: 90%;
         padding-top: 100px;
         padding-bottom: 40px;
@@ -135,7 +147,7 @@
         width: 100%
     }
 
-    .singleFilmImage_div {
+    .movieFilmImage_div {
         width: 40%;
         height: auto;
         margin-right: 30px;
@@ -154,22 +166,22 @@
         font-size: 14px;
     }
 
-    .singleFilm_description {
+    .movieFilm_description {
         font-size: 14px;
     }
 
-    .singleFilm_date {
+    .movieFilm_date {
         font-size: 14px;
 
     }
 
-    .singleFilm_title {
+    .movieFilm_title {
         font-size: 24px;
     }
 }
 
 @media (max-width:480px) {
-    .singleFilm_Main {
+    .movieFilm_Main {
         width: 90%;
         padding-top: 60px;
         padding-bottom: 40px;
@@ -178,7 +190,7 @@
 
     }
 
-    .singleFilmImage_div {
+    .movieFilmImage_div {
         width: 90%;
         height: auto;
         margin: 0 auto
@@ -201,16 +213,16 @@
         font-size: 14px;
     }
 
-    .singleFilm_description {
+    .movieFilm_description {
         font-size: 14px;
     }
 
-    .singleFilm_date {
+    .movieFilm_date {
         margin: 0;
         margin-bottom: 10px
     }
 
-    .singleFilm_title {
+    .movieFilm_title {
         font-size: 20px;
         margin-bottom: 20px
     }

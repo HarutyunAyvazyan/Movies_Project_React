@@ -7,7 +7,7 @@ import "../footer/style.css"
 const Footer = () => {
 
     return (
-        <footer className="container">
+        <footer >
             <div className="footer_container">
                 <SocialMediaLinks />
                 <Sponsors />

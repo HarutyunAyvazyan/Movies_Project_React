@@ -4,7 +4,7 @@ import "./style.css"
 
 const Recomendetion = () => {
     return (
-        <div className="container">
+        <div >
             <div className="recomendetion">
                 <div className="recomendetion_title_div">
                     <span className="recomendetion_title">RECOMENDETION</span>

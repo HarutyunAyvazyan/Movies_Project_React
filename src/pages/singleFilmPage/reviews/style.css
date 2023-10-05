@@ -20,7 +20,8 @@
 
 .reviews_text {
     border-bottom: 2px solid red;
-    padding-bottom: 3px
+    padding-bottom: 3px;    color: white
+
 }
 
 .reviews_input {
@@ -54,6 +55,3 @@
     cursor: pointer;
 }
 
-.reviews_text {
-    color: white
-}
