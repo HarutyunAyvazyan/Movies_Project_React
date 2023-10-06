@@ -10,6 +10,29 @@ export const aboutTheMovie = (movie_id) => `https://api.themoviedb.org/3/movie/$
 
 export const videoMovie = (movie_id) => `https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=${API_KEY}&language=en-US`;
 
+export const videoUrl = "https://www.youtube.com/watch?v="
+
 export const API_POPULAR_MOVIES = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;
 
 export const similarMoviesAccordingToId = (movie_id) => `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=${API_KEY}&language=en-US&page=1`;
+
+export const pageName = {
+    about: "about",
+    contact: "contact",
+    movies: "movies",
+    moviePage: "movie/:id",
+    moviePageVideo: "movie/:id/:title",
+    series: "series",
+    signIn: "signIn",
+    signUp: "signUp",
+    newItems: "newItems"
+}
+export const styleErorText = {
+    textAlign: "end",
+    fontSize: "12px",
+    margin: "0",
+    color: "red"
+  }
+  export const styleErorInput = {
+    border:"1px solid red"
+  }

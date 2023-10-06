@@ -1,55 +1,62 @@
-
-
-.input{
-    width:580px;
-    height: 50px;
-    background-color: rgba(217, 217, 217, 1);
-    border:0;
-    border-radius: 25px;
+.input {
+  
+    background-color: #070A17;
+    border:1px solid #3D4550;
+    border-radius:5px;
+    height:35px;
+    margin-bottom:20px;
+    color:white
 }
 
-.input_title{
-    color:rgba(255, 255, 255, 1);
-    font-weight: 400;
-    font-size: 25px;
-    letter-spacing:2px ;
+.input_title {
+    color: #4E5267;
+    font-size: 14px;
+    font-weight: 500;
 }
-
-
-@media (max-width:768px){
-
- .input_div{
-    width:100%;
+.input_div{
     display: flex;
     flex-direction: column;
+    gap:10px;
+    margin:auto 0
+}
 
- }
+@media (max-width:768px) {
+/* 
+    .input_div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
 
- .input_form{
-    width:100%
- }
+    } */
 
-     .input_title{
-      font-size: 20px;
+    .input_form {
+        width: 100%
     }
-    .input{
-        width:100%
+
+    .input_title {
+        font-size: 20px;
+    }
+
+    .input {
+        width: 100%
     }
 
 }
-@media (max-width:480px){
-   .input_title{
-    font-size: 18px;
-   } 
-   .input{
-    height:30px
-   }
-   
- .input_div{
-    width:100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
- }
+@media (max-width:480px) {
+    .input_title {
+        font-size: 18px;
+    }
+
+    .input {
+        height: 30px
+    }
+/* 
+    .input_div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    } */
 }

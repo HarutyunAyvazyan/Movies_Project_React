@@ -4,14 +4,14 @@ import Sponsors from "./sponsors/Sponsors"
 import "../footer/style.css"
 
 
-const Footer =() => {
+const Footer = () => {
 
-    return(
-        <footer className="container">
+    return (
+        <footer >
             <div className="footer_container">
-            <SocialMediaLinks/>
-            <Sponsors/>
-            <Company/>
+                <SocialMediaLinks />
+                <Sponsors />
+                <Company />
             </div>
         </footer>
     )

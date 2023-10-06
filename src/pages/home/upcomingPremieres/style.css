@@ -1,0 +1,65 @@
+.upcoming_premieres{
+    width:90%;
+    margin:0 auto;
+    background-color: #0B1023;
+    margin-bottom:100px;
+    margin-top: 30px;
+    padding:50px 0
+}
+.upcoming_premieres_title{
+    padding-bottom:3px;
+    border-bottom:2px solid red;
+    color:white;
+}
+
+.upcoming_premieres_div{
+    display: flex;
+    flex-direction: row;
+    margin-top:20px;
+    margin-bottom:100px;
+    width:90%;
+    margin:0 auto
+ 
+}
+
+.upcoming_premieres_description{
+    width:55%;
+    height:auto;
+    color:white
+}
+
+.upcoming_premieres_description_image_div{
+    width:40%;
+    height:auto;
+    display: flex;
+    align-items: center;
+}
+
+.upcoming_premieres_description_image{
+    width:100%;
+    height:auto
+}
+
+@media (max-width:768px){
+    .upcoming_premieres_div{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top:20px;
+        margin-bottom:100px;
+        width:90%;
+        margin:0 auto
+     
+    }
+    .upcoming_premieres_description{
+        width:100%;
+        height:auto;
+        color:white
+    }
+    .upcoming_premieres_description_image_div{
+        width:100%
+    }
+    .upcoming_premieres_description_title{
+        text-align: center;
+    }
+    
+}

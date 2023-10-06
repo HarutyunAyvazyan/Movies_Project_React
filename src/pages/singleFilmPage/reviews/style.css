@@ -1,0 +1,57 @@
+.reviews {
+    width: 80%;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto
+}
+
+.reviews_div {
+    width: 100%;
+    margin: 0 auto
+}
+
+.reviews_text_div {
+    width: 100%;
+    border-bottom: 1px solid grey;
+    padding-bottom: 15px;
+    margin-bottom: 80px
+}
+
+.reviews_text {
+    border-bottom: 2px solid red;
+    padding-bottom: 3px;    color: white
+
+}
+
+.reviews_input {
+    width: 98%;
+    padding: 10px 0 33px 2%;
+    border: 0;
+    margin-bottom: 10px;
+    border-radius: 5px
+}
+
+
+.reviews_btn_image {
+    font-size: 15px;
+    color: white;
+}
+
+.reviews_btn {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.reviews_btn {
+    padding: 5px 5px;
+    background-color: red;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

@@ -1,39 +1,78 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 import "./style.css"
+import { API_IMAGE } from "../../../../constants"
+import { useSelector } from "react-redux";
+import { scrollUp } from "../../../../utils/utils";
+
+
+
 
 const Series = () => {
-    const [films, setFilms] = useState([])
-    useEffect(() => {
-        fetch("https://my-json-server.typicode.com/horizon-code-academy/fake-movies-api/movies")
-            .then(res => res.json())
-            .then(data => setFilms(data))
-            .catch(err => console.log(err, 'Error>>>>>>>>>>>>.'))
-    }, [])
+    const films = useSelector(state => state.state.data);
 
-    return (
+    
+const responsive = {
+    superLargeDesktop: {
+        // the naming can be any, depends on you.
+        breakpoint: { max: 3000, min: 1024 },
+        items: 5,
+        slidesToSlide: 5
+    },
+    desktop: {
+        breakpoint: { max: 1024, min: 768 },
+        items: 3,
+        slidesToSlide: 3
+    },
+    tablet: {
+        breakpoint: { max: 768, min: 480 },
+        items: 2,
+        slidesToSlide: 2
+    },
+    mobile: {
+        breakpoint: { max: 480, min: 0 },
+        items: 1,
+        slidesToSlide: 1
+    }
+};
+    return films && (
         <>
-            <div className="div">
-                {/* {films.length && films.map((film, i) => <div key={i} className="film">{film}</div>)} */}
-            </div>
             <div className="container">
-                <div className="films">
-                    <span className="films_title">series</span>
+                <Carousel responsive={responsive}>
+                        {films && films.map( film =>
 
-                    <div className="films_background_div">
-                        { films.length && films.map((film, i) =>
-                            ( <div key={film.Title} className="films_item">
-                                 <Link> <img src={film.Poster} className="film_image" /></Link>
-                                 <Link className="film_btn">{film.Title}</Link>
-                             </div>)
-                            )
+                            <div key={film.id} className="films_item">
+                                <Link to={`/movie/${film.id}`} onClick={scrollUp}> <img src={`${API_IMAGE}${film.poster_path}`} className="film_image" /></Link>
+                                <Link to={`/movie/${film.id}`} className="film_btn"  onClick={scrollUp} >{film.title}</Link>
+                            </div>
+
+                        )
                         }
-                    </div>
+                </Carousel>
 
-                </div>
             </div>
+
         </>
     )
 }
 
 export default Series
+
+
+{/* <div className="films">
+                    <span className="films_title">series</span>
+                    <div className="films_background_div">
+                    { films.results && films.results.map((film, i) =>
+                             <div key={film.id} className="films_item">
+                                 <Link  to={`/movie/${film.id}`}> <img src={`${API_IMAGE}${film.poster_path}`} className="film_image"  /></Link>
+                                 <Link  to={`/movie/${film.id}`} className="film_btn" >{film.title}</Link>
+                             </div>
+
+                            )
+                        }
+                       
+                        </div>
+                       
+                </div> */}

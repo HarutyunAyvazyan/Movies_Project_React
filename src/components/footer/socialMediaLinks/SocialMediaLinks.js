@@ -14,7 +14,7 @@ const SocialMediaLinks = () => {
             <div className="footer_links">
 
                 <div className="social_icons_div">
-                    <img src={kat} className="icon"/>
+                    <img src={kat} className="icon" />
                     <Link to="#" className="social_link_text">  nourddine benyahya</Link>
                 </div>
 
@@ -24,17 +24,17 @@ const SocialMediaLinks = () => {
                 </div>
 
                 <div className="social_icons_div">
-                    <img src={linkadin} className="icon"/>
+                    <img src={linkadin} className="icon" />
                     <Link to="#" className="social_link_text">  nourddine benyahya</Link>
                 </div>
 
                 <div className="social_icons_div">
-                    <img src={phone} className="icon"/>
+                    <img src={phone} className="icon" />
                     <Link to="#" className="social_link_text">  +212607-081298</Link>
                 </div >
-                
+
                 <div className="social_icons_div">
-                    <img src={fb} className="icon"/>
+                    <img src={fb} className="icon" />
                     <Link to="#" className="social_link_text">  nourddine ben</Link>
                 </div>
             </div>

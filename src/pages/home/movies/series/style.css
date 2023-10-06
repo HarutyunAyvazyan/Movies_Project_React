@@ -1,13 +1,4 @@
 
-
-.film{
-    width:250px;
-    height: 40px;
-     display: block;
-background-color: aqua; 
-}
-
-.div{
-    /* width:1800px; */
-    overflow: hidden;
+.react-multi-carousel-list {
+    margin: 0 auto;
 }

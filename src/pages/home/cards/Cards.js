@@ -1,40 +1,28 @@
-import {useState} from "react" 
+import { useState } from "react"
 import Card from "./card/Card"
+import "./style.css"
+import { useSelector } from "react-redux";
 
-const Cards =() => {
-    const [cards,setCards] = useState([{
-        id:Date.now,
-        title:"basic",
-        main:1
-    },{
-        id:Date.now,
-        title:"standard",
-        main:2
-    },
-{
-    id:Date.now,
-    title:"premium",
-    main:3
+const Cards = () => {
 
-},])
-    return(
-        <>
-        <span className="cards_title">
-        principal service
-    </span>
+    const films = useSelector(state => state.state.data);
+
+    const cards = films.slice(4, 7)
+    // console.log(cards)
+
+
+    return (
         <div className="container">
-          
- <div className="cards">
-        {cards.map((card,i)=>{
-            return <div key={i} className="card_item" >
-            <Card title={card.title} main ={card.main}/>
+            <div className="cards">
+                {cards.map((card, i) => {
+                    return <div key={i} className="card_item" >
+                        <Card card={card} />
+                    </div>
+                })}
             </div>
-        })}
-    </div>
         </div>
-       </>
     )
-    
+
 }
 
 export default Cards

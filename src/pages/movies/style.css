@@ -1,0 +1,24 @@
+.movies_search_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 130px
+}
+
+.loadMore_btn{
+    width:80%;
+    margin:0 auto;
+    padding:10px 0;
+    border-radius:5px;
+    margin-top:50px ;
+    margin-bottom:50px;
+    color:white;
+    background-color:inherit;
+    border:1px solid #891a85;
+    cursor:pointer
+
+    }
+
+    .loadMore_btn:hover{
+        border:1px solid #ef68ed;
+    }
